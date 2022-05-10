@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE Oglasi SYSTEM "oglasi.dtd">
+<Oglasi>
+    <Oglas>
+        <Kategorija tip="Nekretnine" />
+        <DatumIsteka>2022-06-20</DatumIsteka>
+        <Cena valuta="EUR">20.000</Cena>
+        <Tekst>Prodajem stan od 40 kvadrata u Borci.</Tekst>
+        <Tag>prodaja</Tag>
+        <Tag>garsonjera</Tag>
+        <Tag>Borca</Tag>
+        <Tag>Beograd</Tag>
+        <Tag>Renovirano</Tag>
+        <Email tip="privatni">borca@borca.com</Email>
+    </Oglas>
+    <Oglas>
+        <Kategorija tip="Vozila" />
+        <DatumIsteka>2023-01-01</DatumIsteka>
+        <Cena valuta="EUR">10.000</Cena>
+        <Tekst>Fiat Punto 2005. godiste, 3 vrata </Tekst>
+        <Tag>prodaja</Tag>
+        <Tag>automobil</Tag>
+        <Tag>Nis</Tag>
+        <Tag>polovno</Tag>
+        <Email tip="sluzbeni">fiatpunto@mail.com</Email>
+    </Oglas>
+    <Oglas>
+        <Kategorija tip="Racunari" />
+        <DatumIsteka>2022-06-01</DatumIsteka>
+        <Cena valuta="RSD">10.000</Cena>
+        <Tekst>Prodajem polovni monitor marke DELL sa pokretnim drzacem</Tekst>
+        <Tag>prodaja</Tag>
+        <Tag>racunarske periferije</Tag>
+        <Tag>monitor</Tag>
+        <Tag>polovno</Tag>
+        <Email tip="sluzbeni">polovniracunari@mail.com</Email>
+    </Oglas>
+</Oglasi>
