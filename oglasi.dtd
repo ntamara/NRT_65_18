@@ -1,0 +1,11 @@
+<!ELEMENT Oglasi (Oglas)+>
+<!ELEMENT Oglas (Kategorija, DatumIsteka, Cena, Tekst, Tag+, Email+)>
+<!ELEMENT Kategorija EMPTY>
+<!ELEMENT DatumIsteka (#PCDATA)>
+<!ELEMENT Cena (#PCDATA)>
+<!ELEMENT Tekst (#PCDATA)>
+<!ELEMENT Tag (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+<!ATTLIST Cena valuta (RSD|EUR) "RSD">
+<!ATTLIST Email tip (privatni|sluzbeni) "privatni">
+<!ATTLIST Kategorija tip (Nekretnine|Posao|Usluge|Vozila|Antikviteti|Racunari) "Nekretnine">
