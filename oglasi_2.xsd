@@ -1,0 +1,72 @@
+<?xml version='1.0'?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="Oglasi">
+<xs:complexType>
+    <xs:sequence>
+        <xs:element name="Oglas" maxOccurs="unbounded">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Kategorija">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Nekretnine"/>
+                        <xs:enumeration value="Posao"/>
+                        <xs:enumeration value="Usluge"/>
+                        <xs:enumeration value="Vozila"/>
+                        <xs:enumeration value="Antikviteti"/>
+                        <xs:enumeration value="Racunari"/>
+                    </xs:restriction>
+                </xs:simpleType>
+                </xs:element>
+                <xs:element name="DatumIsteka">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="\d{2}-\w{3}-\d{4}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+                </xs:element>
+                <xs:element name="Cena">
+                <xs:complexType>    
+                    <xs:sequence>
+                        <xs:element name="Vrednost" type="xs:positiveInteger"/>
+                    </xs:sequence>                           
+                    <xs:attribute name="valuta" type="xs:string" default="RSD"/>
+                </xs:complexType>
+                </xs:element>
+                <xs:element name="Tekst">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="10"/>
+                        <xs:maxLength value="180"/>                                        
+                    </xs:restriction>
+                </xs:simpleType>
+                </xs:element>
+                <xs:element name="Tag" maxOccurs="unbounded"/>
+                <xs:element name="Email">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name='Adresa'>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:pattern value="\w*@[\w.]*"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="tip">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="privatni"/>
+                            <xs:enumeration value="sluzbeni"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                    </xs:attribute>
+                </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        </xs:element>
+    </xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:schema>
