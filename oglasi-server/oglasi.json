@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "kategorija":"nekretnine",
+        "datum_isteka":"20-Jun-2022",
+        "cena": [{
+            "valuta":"EUR",
+            "vrednost":20000
+        }],
+        "tekst":"Prodajem sveze renoviran stan od 40 kvadrata u Borci.",
+        "tagovi":[{
+            "1":"prodaja",
+            "2":"garsonjera",
+            "3":"Borca",
+            "4.":"renovirano"
+        }],
+        "email":[{
+            "tip":"privatni",
+            "adresa":"borca@borca.com"
+        }]
+    },
+    {
+        "id":2,
+        "kategorija":"vozila",
+        "datum_isteka":"01-Jan-2023",
+        "cena": [{
+            "valuta":"EUR",
+            "vrednost":12000
+        }],
+        "tekst":"Prodajem Fiat Punto 2005. godiste, 3 vrata",
+        "tagovi":[{
+            "1":"prodaja",
+            "2":"automobil",
+            "3":"Fiat",
+            "4":"polovno",
+            "5":"Nis"
+        }],
+        "email":[{
+            "tip":"sluzbeni",
+            "adresa":"fiatpunto@mail.com"
+        }]
+    },
+    {
+        "id":3,
+        "kategorija":"racunari",
+        "datum_isteka":"01-Aug-2022",
+        "cena": [{
+            "valuta":"RSD",
+            "vrednost":1600
+        }],
+        "tekst":"Prodajem polovni monitor marke DELL sa pokretnim drzacem.",
+        "tagovi":[{
+            "1":"prodaja",
+            "2":"racunarske periferije",
+            "3":"monitori",
+            "4.":"polovno"
+        }],
+        "email":[{
+            "tip":"privatni",
+            "adresa":"polovniracunari@mail.com"
+        }]
+    }
+]
