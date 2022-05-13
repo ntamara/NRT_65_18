@@ -1,0 +1,133 @@
+/* Global */
+
+html {
+    box-sizing: border-box; 
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    background: #edc7b7;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.container{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    background-color: #ac3b61;
+    color: #edc7b7;
+    padding: 1em;
+    margin-top: 2em;
+    border: 2em solid transparent;
+    border-radius: 2em 0.5em;
+}
+
+.content{
+    width: 100%;
+    overflow: auto;
+
+}
+
+
+table, td, thead {
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 20px;
+}
+
+td a {
+    text-decoration: none;
+    color: #edc7b7;
+}
+
+td a:hover {
+    color: #123c69;
+}
+
+thead {
+    text-transform: uppercase !important;
+    background-color: #edc7b7;
+    color: #123c69;
+}
+
+table {
+    width: max;
+}
+
+/*Header*/
+
+header{
+    position: sticky;
+    top: 0;
+    background-color: #edc7b7;
+    color: #ac3b61;
+    padding-top: 1em;
+    margin-bottom: 3em;
+    min-height: 10%;
+    width: 80%;
+}
+
+header a{
+    text-decoration: none;
+    color: #123c69;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    border-bottom: solid .2em  transparent;
+}
+
+header a:hover{
+    border-bottom: solid .2em  #ac3b61;
+}
+
+header ul{
+    margin: 0;
+    padding: 0;
+}
+
+header li {
+    list-style-type: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    padding-right: 2em;
+}
+
+nav{
+    float: right;
+    margin-top: 0.5em;
+    display: flex;
+    border-bottom: 2pt solid #ac3b61;
+}
+
+
+.nav-link-current{
+    font-weight: bolder;
+    border-bottom: solid .2em  #ac3b61;
+}
+
+input {
+    width: 20%;
+    padding: 5px 15px;
+    margin: 8px 0;
+}
+
+label {
+    display: block;
+    float: left;
+    width: 20%;
+}
+
+#dodaj {
+    width: 30%;
+    margin: 8px;
+    padding: 5px;
+}

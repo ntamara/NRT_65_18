@@ -14,12 +14,14 @@ exports.sviOglasi = () => {
 };
 
 exports.novOglas = (novOglas) => {
-    let id = 1;
     let oglasi = this.sviOglasi();
-    if(oglasi.length > 0){
-        id = oglasi[oglasi.length-1].id+1;
+    if(!novOglas.hasOwnProperty("id")){
+        let id = 1;
+        if(oglasi.length > 0){
+            id = oglasi[oglasi.length-1].id+1;
+        }
+        novOglas.id = id;
     }
-    novOglas.id = id;
     oglasi.push(novOglas);
     snimiOglase(oglasi);
 };
@@ -29,7 +31,7 @@ exports.dohvatiOglas = (id) => {
 }
 
 exports.obrisiOglas = (id) => {
-    return (this.sviOglasi().filter(oglas=>oglas.id!=id));
+    snimiOglase(this.sviOglasi().filter(oglas=>oglas.id!=id));
 }
 
 exports.izmeniOglas = (oglas) => {
@@ -37,14 +39,10 @@ exports.izmeniOglas = (oglas) => {
     this.novOglas(oglas);
 }
 
-exports.nadjiPoKategoriji = (kategorija) => {
-    return this.sviOglasi().filter(oglas=>oglas.kategorija == kategorija);
+exports.nadjiPoKategoriji = (kat) => {
+    return this.sviOglasi().filter(oglas => oglas.kategorija === kat);
 } 
 
-exports.listaKategorija = () => {
-    let kategorije = [];
-    this.sviOglasi().forEach(element => {
-        kategorije.push(element.kategorija)
-    });
-    return kategorije;
+exports.pretragaPoSadrzaju = (izraz) => {
+    return this.sviOglasi().filter(oglas => oglas.tekst.includes(izraz));
 }

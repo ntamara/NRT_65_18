@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Projektni zadatak iz predmeta Inegracija softverskih tehnologija">
+    <meta name="author" content="Tamara Najman, NRT-65/18">
+    <meta name="keywords" content="VIŠER, IST">
+    <meta name="language" content="Srpski, Serbian">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Oglasi</title>
+</head>
+<body>
+  <header> 
+    <nav>
+      <ul>
+        <li><a class="nav-link" href="/oglasi">Oglasi</a></li>
+        <li><a class="nav-link-current" href="/dodajOglas">Dodaj</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="content">
+    <div class="container">
+        <h2>Objavite novi oglas</h2>
+        <form action="/noviOglas" method="POST">
+            <label for="kategorija">Kategorija: </label>
+            <select name="kategorija">
+                <option value="nekretnine">Nekretnine</option>
+                <option value="posao">Posao</option>
+                <option value="usluge">Usluge</option>
+                <option value="vozila">Vozila</option>
+                <option value="antikviteti">Antikviteti</option>
+                <option value="racunari">Racunari</option>
+            </select><br/>
+
+            <label for="datum_isteka">Oglas vazi do: </label>
+            <input type="date" name="datum_isteka"><br/>
+
+            <label for="vrednost">Cena: </label>
+            <input type="number" name="vrednost">
+            <select name="valuta">
+                <option value="RSD" selected>RSD</option>
+                <option value="EUR">EUR</option>
+            </select><br/>
+
+            <label for="adresa">Email adresa: </label>
+            <input type="email" name="adresa">
+            <select name="tip">
+                <option value="privatni" selected>Privatni</option>
+                <option value="sluzbeni">Sluzbeni</option>
+            </select><br/>
+
+            <label for="tekst">Tekst: </label>
+            <textarea name="tekst" rows="10" cols="30" placeholder="Upisite tekst vaseg oglasa"></textarea> <br/>
+
+            <label for="tagovi">Tagovi: </label>
+            <input type="text" name="tagovi" placeholder="unesite tagove podeljene razmakom"><br/>
+
+            <button id="dodaj" type="submit">Sacuvaj</button>
+        </form>
+    </div>
+  </section>
+</body>
+</html>

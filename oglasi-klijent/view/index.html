@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Projektni zadatak iz predmeta Inegracija softverskih tehnologija">
+    <meta name="author" content="Tamara Najman, NRT-65/18">
+    <meta name="keywords" content="VIŠER, IST">
+    <meta name="language" content="Srpski, Serbian">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Oglasi</title>
+</head>
+<body>
+  <header> 
+    <nav>
+      <ul>
+        <li><a class="nav-link-current" href="/oglasi">Oglasi</a></li>
+        <li><a class="nav-link" href="/dodajOglas">Dodaj</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="content">
+    <div class="container">
+      <form action="/filterKategorija" method="POST">
+        <label for="kategorija">Filter kategorija: </label>
+        <select name="kategorija">
+          <option value="nekretnine">Nekretnine</option>
+          <option value="posao">Posao</option>
+          <option value="usluge">Usluge</option>
+          <option value="vozila">Vozila</option>
+          <option value="antikviteti">Antikviteti</option>
+          <option value="racunari">Racunari</option>
+        </select>
+        <button type="submit">Filtriraj</button>
+      </form>
+      <form action="/pretragaPoSadrzajuOglasa" method="POST">
+        <label for="izraz">Pretraga: </label>
+        <input type="text" name="izraz">
+        <button type="submit">Pretrazi</button>
+      </form>
+      <table>
+        <thead>
+          <tr>
+            <td>Oglas</td>
+            <td>Kategorija</td>
+            <td>Cena</td>
+            <td>Vazi do</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </thead>
+        <tbody>
+          #{data}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</body>
+</html>
